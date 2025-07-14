@@ -69,7 +69,37 @@ INSERT INTO Department (
 
 8. Get the list of employee names and their corresponding job roles
     select FULL_NAME , ROLE from employee;
-    
+
 9. Display the employee names and their joining dates
+    select FULL_NAMES , JOIN_DATE FROM  employee; 
 
 10. Get the employee names along with their employee IDs.
+    select FULL_NAME , EMP_ID from employee;
+
+11. Display the employee names and their department IDs.
+    select FULL_NAME , DEPT_ID from employee;
+
+12. Find the names and salary details of all employees.
+    select FULL_NAME , SALARY from the employee;.
+
+13. Get the names and bonus amounts assigned to each employee.
+    select FULL_NAME , BONUS from the employe;
+
+14. Display the names and blood groups of all employees.
+    
+15. Find the names and genders of all employees in the company.
+16. Get the names of employees and their birth dates.
+17. Find each employee’s name and their annual salary (Salary × 12).
+18. Display names and total compensation (Salary + Bonus) of each employee.
+19. Show employee names with their half-year salary (Salary × 6).
+20. Get names and projected salary after a 10% increment.
+21. Display names and reduced salary after a 10% deduction.
+22. Show the name and a 25% reduced salary for each employee.
+23. Display the name and salary after adding a fixed bonus of ₹2000.
+24. Get the name and salary after deducting ₹100 as a penalty.
+25. Show names with salary hike of ₹500 per month (Annual: Salary + 500×12).
+26. Find names with annual bonus of ₹2400 added to salary.
+27. Find how many departments we have in emp table
+28. Find the How many types of job roles in the company
+29. Find how many unique departments are present in the employee table
+30. Find how many unique job roles exist in the company 
