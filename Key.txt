@@ -86,13 +86,25 @@ INSERT INTO Department (
     select FULL_NAME , BONUS from the employe;
 
 14. Display the names and blood groups of all employees.
-    
+    select FULL_NAME , BLOOD_GROUP from employe
 15. Find the names and genders of all employees in the company.
+    select FULL_NAME , GENDER from employe;
+
 16. Get the names of employees and their birth dates.
+    select FULL_NAME , DOB DATE from employe
+
 17. Find each employee’s name and their annual salary (Salary × 12).
+    select FULL_NAME ,salary*12 from employe;
+
 18. Display names and total compensation (Salary + Bonus) of each employee.
+    select FULL_NAME,salary+ifnull(BONUS,1) from Employee;
+
 19. Show employee names with their half-year salary (Salary × 6).
+    select Full_NAME,salary*0.5 from Employee;
+
 20. Get names and projected salary after a 10% increment.
+    select Full_NAME,salary+(salary/100)*10 from Employee;
+    
 21. Display names and reduced salary after a 10% deduction.
 22. Show the name and a 25% reduced salary for each employee.
 23. Display the name and salary after adding a fixed bonus of ₹2000.
