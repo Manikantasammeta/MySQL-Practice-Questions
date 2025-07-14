@@ -104,14 +104,33 @@ INSERT INTO Department (
 
 20. Get names and projected salary after a 10% increment.
     select Full_NAME,salary+(salary/100)*10 from Employee;
-    
+
 21. Display names and reduced salary after a 10% deduction.
+    select Full_NAME,salary-(salary/100)*10 from Employee;
+
 22. Show the name and a 25% reduced salary for each employee.
+    select Full_NAME,salary-(salary/100)*25 from Employee;
+
 23. Display the name and salary after adding a fixed bonus of ₹2000.
+    select FULL_NAME,salary+2000 from employee;
+
 24. Get the name and salary after deducting ₹100 as a penalty.
+    select Full_NAME,salary-100 from Employee;
+
 25. Show names with salary hike of ₹500 per month (Annual: Salary + 500×12).
+    select Full_NAME,salarySalary + (500×12) from Employee;
+
 26. Find names with annual bonus of ₹2400 added to salary.
+    select FULL_NAME ,salary+2400 from employee;
+
 27. Find how many departments we have in emp table
+    select distinct DEPT_ID from employee;
+
 28. Find the How many types of job roles in the company
+    select distinct ROLE from employee;
+
 29. Find how many unique departments are present in the employee table
-30. Find how many unique job roles exist in the company 
+    select distinct DEPT_ID from employee;
+
+30. Find how many unique job roles exist in the company.
+    select distinct ROLE from employee;
