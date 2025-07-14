@@ -68,7 +68,8 @@ INSERT INTO Department (
     select * from employee;
 
 8. Get the list of employee names and their corresponding job roles
-
+    select FULL_NAME , ROLE from employee;
+    
 9. Display the employee names and their joining dates
 
 10. Get the employee names along with their employee IDs.
