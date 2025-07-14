@@ -1,1 +1,44 @@
-sfsvsd
+1. CREATE A TABLE? TABLE NAME EMPLOYEE, THE TABLE CONTAINS 12 COLUMNS? 
+
+CREATE TABLE employee  (
+    EMP_ID INT PRIMARY KEY,
+    FULL_NAME VARCHAR(50),
+    ROLE VARCHAR(30),
+    JOIN_DATE DATE,
+    REPORTS_TO INT,
+    SALARY INT,
+    BONUS INT,
+    DEPT_ID INT,
+    BLOOD_GROUP VARCHAR(5),
+    EMP_TYPE VARCHAR(10),
+    GENDER VARCHAR(10),
+    DOB DATE
+);
+
+3.INSERT SOME DATA INTO TABLE
+
+INSERT INTO employee (
+    EMP_ID, FULL_NAME, ROLE, JOIN_DATE, REPORTS_TO,
+    SALARY, BONUS, DEPT_ID, BLOOD_GROUP,
+    EMP_TYPE, GENDER, DOB
+) VALUES
+(1127, 'Vani', 'Frontend Developer', '2021-03-10', 1739, 80000, 5000, 1, 'A+', 'Full-time', 'Female', '1993-07-19'),
+(1182, 'Sai Kiran', 'QA Engineer', '2020-05-12', 1739, 70000, 4000, 2, 'B+', 'Intern', 'Male', '1992-12-01'),
+(1261, 'Ravi', 'DevOps Engineer', '2021-11-25', 1846, 90000, 7000, 3, 'AB-', 'Full-time', 'Male', '1995-08-09'),
+(1053, 'Mani', 'Backend Developer', '2022-06-15', 1053, 85000, 6000, 1, 'O+', 'Contract', 'Male', '1999-03-21'),
+(1344, 'Sai', 'Cybersecurity Analyst', '2023-02-01', 1846, 95000, 0, 4, 'O-', 'Full-time', 'Male', '1991-10-05'),
+(1432, 'Harika', 'UI/UX Designer', '2020-10-18', 1739, 78000, 4000, 1, 'A-', 'Intern', 'Female', '1996-04-30'),
+(1580, 'Krishna Reddy', 'System Administrator', '2019-09-01', 1846, 87000, 5500, 3, 'B-', 'Full-time', 'Male', '1989-01-19'),
+(1615, 'Soumya', 'Database Engineer', '2021-12-05', 1739, 91000, NULL, 1, 'O+', 'Full-time', 'Female', '1993-06-27'),
+(1739, 'Sirisha', 'Technical Lead', '2018-05-14', NULL, 130000, 12000, 1, 'AB+', 'Full-time', 'Female', '1985-07-11'),
+(1846, 'Tejaswini', 'Cloud Architect', '2017-08-20', NULL, 140000, 15000, 3, 'A+', 'Full-time', 'Female', '1987-02-03'),
+(1957, 'Vishnu Priya', 'HR Executive', '2022-07-01', 1068, 65000, NULL, 5, 'B+', 'Contract', 'Female', '1995-11-14'),
+(1068, 'Sireesha', 'HR Manager', '2020-10-15', NULL, 95000, 6000, 5, 'A-', 'Full-time', 'Female', '1990-06-08'),
+(1133, 'Raju', 'Network Security Engineer', '2021-04-12', 1053, 88000, 7000, 4, 'O+', 'Full-time', 'Male', '1993-01-09'),
+(1209, 'Charan', 'Business Analyst', '2020-10-01', 1739, 78000, NULL, 1, 'B+', 'Intern', 'Male', '1992-08-23'),
+(1375, 'Tarun Kumar', 'Automation Tester', '2023-01-19', 1182, 73000, 4000, 2, 'O-', 'Full-time', 'Male', '1994-12-12'),
+(1482, 'Lakshmi', 'Recruiter', '2022-09-03', 1068, 60000, 2000, 5, 'A+', 'Full-time', 'Female', '1996-03-29'),
+(1571, 'Srikanth', 'DevOps Specialist', '2021-02-25', 1846, 92000, 6000, 3, 'B-', 'Full-time', 'Male', '1990-10-04'),
+(1677, 'Pranavi', 'Penetration Tester', '2023-05-10', 1344, 96000, NULL, 4, 'AB+', 'Full-time', 'Female', '1995-01-17'),
+(1763, 'Pavan', 'Software Architect', '2019-07-30', 1127, 145000, 20000, 1, 'O+', 'Contract', 'Male', '1988-05-25'),
+(1894, 'Jahnavi', 'HR Coordinator', '2020-11-05', 1068, 63000, 2500, 5, 'B-', 'Full-time', 'Female', '1993-09-22');
