@@ -42,3 +42,33 @@ INSERT INTO employee (
 (1677, 'Pranavi', 'Penetration Tester', '2023-05-10', 1344, 96000, NULL, 4, 'AB+', 'Full-time', 'Female', '1995-01-17'),
 (1763, 'Pavan', 'Software Architect', '2019-07-30', 1127, 145000, 20000, 1, 'O+', 'Contract', 'Male', '1988-05-25'),
 (1894, 'Jahnavi', 'HR Coordinator', '2020-11-05', 1068, 63000, 2500, 5, 'B-', 'Full-time', 'Female', '1993-09-22');
+
+4. CREATE A TABLE? TABLE NAME DEPARTMENT, THE TABLE CONTAINS 4 COLUMNS 
+CREATE TABLE Department (
+    DEPT_ID INT PRIMARY KEY,
+    DEPT_NAME VARCHAR(50),
+    LOCATION VARCHAR(50),
+    HEAD_ID INT
+);
+
+5. INSERT SOME DATA INTO DEPARTMENT, TABLE
+
+INSERT INTO Department (
+    DEPT_ID, DEPT_NAME, LOCATION, HEAD_ID
+) VALUES
+(1, 'Development', 'Hyderabad', 1739),
+(2, 'Testing', 'Bangalore', 1182),
+(3, 'DevOps', 'Chennai', 1846),
+(4, 'Cybersecurity', 'Pune', 1344),
+(5, 'Human Resources', 'Delhi', 1068);
+
+6. Now Add the foreign key Between in Employee Table &Department Table
+
+7.Display the full details of all employees working in the organization
+    select * from employee;
+
+8. Get the list of employee names and their corresponding job roles
+
+9. Display the employee names and their joining dates
+
+10. Get the employee names along with their employee IDs.
