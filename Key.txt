@@ -138,11 +138,22 @@ INSERT INTO Department (
 Where Clause 
 
 1.Display the annual salary of the employee whose name is Sai.
+    select salary from employee where FULL_NAME=='Sai';
+
 2. Show the names of employees working as Backend Developer.
+    select Full_NAME from employee where ROLE= "Backend Developer";
+
 3. Find the salary of employees who are working as QA Engineer.
+    select salary from employee where ROLE="QA Engineer"
+
 4. Get the details of employees who earn more than ₹2000 as bonus.
+    select * from employee where salary>2000;
+
 5. Display all the details of the employee whose name is Ravi.
+    select * from employe where  FULL_NAME="Ravi";
+
 6. Find the details of employees who joined after '2021-01-01'.
+
 7. Show the name and salary along with annual salary of employees earning more than
 ₹120000 per year.
 8. Display the EMP_ID of employees who are working in department 3.
