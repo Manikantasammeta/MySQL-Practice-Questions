@@ -206,20 +206,52 @@ Where Clause
     select * from employee where salary> 60000 and salaary <90000;
 
 24. Display the details of employees born after the year 1993.
-    
+    select * from employee DOB>"1993";
+
 25. Find employees whose EMP_TYPE is 'Contract'.
+    select * from employee where   EMP_TYPE is "Contract";
+
 26. Get the details of employees who report to manager with EMP_ID 1739.
+    select * from employee where REPORTS_TO = 1739;
+
 27. Display the full names and DOB of employees born in 1995.
+    select FULL_NAME ,DOB from employee where DOM=1995;
+
 28. Show the names of employees who have a null value in BONUS.
+    select FULL_NAME from employee where Bonus is NULL;
+
 29. Find the details of employees who joined on or after '2022-01-01'.
+    select * from employee where JOIN_DATE > 
+
 30. Get the names of employees whose salary is equal to 78000.
+    select FULL_NAME from employee where salary = 78000;
+
 31. Display all employees who are not 'Male'.
+    select * from employee where Gender != "MALE";
+
 32. Find details of employees whose blood group is not 'A+'.
+    select * from employee where BLOOD_GROUP !="A+";
+
 33. Get details of employees with DEPT_ID not equal to 2.
+    select * from employee where DEPT_ID !=2;
+
 34. Find the employees who have both salary and bonus more than 80000.
+    select * from employee salary+Bonus>80000;
+
 35. Show the full names of employees whose name length is more than 5 characters.
+    select FULL_NAME from employee where length(FULL_NAME)>5;
+
 36. Display the names of employees who joined exactly on '2021-11-25'.
+    select Full_NAME from employee where JOIN_DATE="2021-11-25";
+
 37. Get details of employees who are reporting to themselves.
+    select * from employee from employee where REPORTS_TO= EMP_ID;
+
 38. Find the details of employees working as HR
+    select * from employee where ROLE= "HR";
+
 39. Display the details of employees born after the year 2001.
-40. Find the details of employees who joined on or after '2002
+    select * from employee where DOB>"2001";
+
+40. Find the details of employees who joined on or after '2002.
+    select * from employee where JOIN_DATE >="2002-01-01"
