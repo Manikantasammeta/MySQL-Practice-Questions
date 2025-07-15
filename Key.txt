@@ -153,19 +153,41 @@ Where Clause
     select * from employe where  FULL_NAME="Ravi";
 
 6. Find the details of employees who joined after '2021-01-01'.
+    select * from employee where JOIN_DATE > '2021-01-01';
 
-7. Show the name and salary along with annual salary of employees earning more than
-₹120000 per year.
+7. Show the name and salary along with annual salary of employees earning more than ₹120000 per year.
+    select FULL_NAME,slary , salary*12 from employee where salary >120000;
+
 8. Display the EMP_ID of employees who are working in department 3.
+    select  EMP_ID from where DEPT_ID = 3;
+
 9. Show name and join date of employees who joined before '2020-01-01'.
+    select Full_NAME , JOIN_DATE from employee where JOIN_DATE < '2020-01-01'
+
 10. Find the details of employees working as Technical Lead.
+    select * from employee where ROLE=" Technical Lead";
+
 11. Display name and salary of the employee who is receiving ₹6000 as bonus.
+    select FULL_NAME , salary from employee where Bonus>6000;
+
 12. Show details of employees whose bonus is greater than their salary.
+    
+    
 13. Display EMP_IDs of employees who were born before the year 1987.
+    select EMP_ID from employee where DOB > 1987;
+
 14. Show details of employees working as Cybersecurity Analyst.
+    select * from employee where ROLE= "Cybersecurity Analyst";
+
 15. Get the details of employees earning more than ₹2000 bonus per month.
+    select * from employee where (Bonus/12)>2000;
+
 16. Show the details of employees whose gender is 'Female'.
+    select * from employee where Gender= "FEMALE".
+
 17. Display the names and roles of employees whose salary is less than 80000.
+    select  Full_NAME, ROLE from employee where salary <80000;
+    
 18. Find the employees who joined in the year 2020.
 19. Show the names of employees whose blood group is 'O+'.
 20. Display the details of employees whose bonus is not null.
