@@ -261,33 +261,90 @@ AND & OR
 
 
 1. Display the names and salary of employees who are ‘Full-time’ and earn more than 80000.
+    select Full_NAME , salary from employee where ROLE ="Full-Time" and salary>80000;
+
 2. Get the details of employees who joined in 2021 and have a bonus more than 5000.
+    select * from the employee where  JOIN_DATE >= '2021-01-01' and JOIN_DATE<=2021-12-31' and salary>5000.
+
 3. Show the employee names and DOB of all female employees born after 1992 and before 1998.
+    select * from employee DOB > '1992' and  DOB<'1992' and GENDER ='FEMALE';
+
 4. Find the employees working in department 1 and reporting to EMP_ID 1739.
+    select * from employee where  DEPT_ID ='1' and REPORTS_TO = 1739;
 5. Get details of employees who are ‘Male’ and have blood group ‘B-’.
+    select * from employee where GENDER = 'MALE' and BLOOD_GROUP ='B_';
+
 6. List employees whose salary is more than 85000 and bonus is not null.
+    select * from employee salaary>85000 and BONUS is not NULL;
+
 7. Show the names of employees who are working as ‘Intern’ and are in DEPT_ID 2.
+    select  * from employee where  EMP_TYPE = '‘Intern’ and DEPT_ID='2';
+
 8. Get the list of employees whose EMP_TYPE is ‘Contract’ and salary is more than 70000.
+    selct * from employee where EMP_TYPE = '‘Contract’ and salary >70000;
+
 9. Display full names and join dates of employees hired after '2020-01-01' and with EMP_TYPE 'Intern'.
+    select FULL_NAME,JOIN_DATE from employee where JOIN_DATE > '2020-01-01' and EMP_TYPE ='‘Intern’;
+
 10. Find employees whose SALARY is greater than BONUS and EMP_TYPE is 'Contract'.
+    select * from employee where salary >Bonus and EMP_TYPE = "‘Contract’;
+
 11. Show the full name, DEPT_ID, and ROLE of employees working as ‘Technical Lead’ in DEPT_ID 1.
+    select FULL_NAME , DEPT_ID , ROLE from employee where ROLE = ‘Technical Lead’ and DEPT_ID ='1';
+
 12. Get the full name, DEPT_ID, and SALARY of employees working in DEPT_ID 2 and earning less than 80000.
+    select FULL_NAME , DEPT_ID, salary from employee where DEPT_ID =2 and salary <80000;
+
 13. Display full name and SALARY of employees earning more than 60000 and less than 90000.
+    select FULL_NAME , salary from  employee where salary >60000 and salary <90000;
+
 14. Find the full name and DEPT_ID of employees in DEPT_ID 1 and working as ‘Backend Developer’.
+    select FULL_NAME , DEPT_ID from employee where DEPT_ID =1 aand ROLE ='‘Backend Developer';
+
 15. Find employees whose role is either ‘Backend Developer’ or ‘Frontend Developer’.
+select * from employee where ROLE in ('Backend Developer','Frontend Developer');
+    select * from employee where ROLE in ("Backend Developer’, Frontend,'Developer’")
+
 16. Display names of employees who joined in 2020 or 2021.
+    select FULL_NAME from employee where JOIN_DATE in ('2020','2021')
+    selct FULL_NAME from employee where JOIN_DATE = 2020 or JOIN_DATE = 2021;
+
 17. Show the employees who either earn a bonus more than 10000 or salary less than 70000.
+    select * from employee where Bonus >10000 or salary <70000;
+
 18. List employees who report to EMP_ID 1739 or 1846.
+    select * from employee where REPORTS_TO in (1739,1846);
+    select * from where REPORTS_TO =1739 or REPORTS_TO =1846;
+
 19. Get names of employees whose EMP_TYPE is ‘Intern’ or ‘Full-time’.
+    select * from employee where EMP_TYPE in ('Intern','Full time')
+    select * from employe where EMP_TYPE = 'Interns' or EMP_TYPE = 'Full time';
+
 20. List the names and salary of employees earning 85000 or 95000.
+    select FULL_NAME , Salary  from employee where salary in (85000,95000);
+    select FULL_NAME , salary from employee where salary = 85000 or salary =95000;
+
 
 IN & NOT IN
 
 1. Display details of employees who are not working in DEPT_ID 1.
+    select * from employee where DEPT_ID not in (1);
+    select * from employee where DEPT_ID !=1;
+
 2. Get the list of employees who are not 'Female'.
+    select FULL_NAME from employee where GENDER not in (FEMALE);
+    select Full_NAME from employee where GENDER!=Female;
+
 3. Find all employees who are not ‘Interns’.
+    select FULL_NAME from employee where EMP_TYPE not in ('Intern');
+    select FULL_NAME from employee where EMP_TYPE != ' Intern';
+
 4. List names of employees who are not born before 1990.
+    select FULL_NAME from employee where DOB not in (1990);
+    select FULL_NAME from employee where DOB!=1900;
+
 5. Show details of employees whose blood group is not ‘O+’.
+    select * from
 6. Find employees who are not working as 'DevOps Engineer'.
 7. Display the details of employees not having bonus more than 5000.
 8. Get names of employees who do not report to EMP_ID 1739.
