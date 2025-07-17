@@ -444,36 +444,82 @@ Between
 
 1. Display employees whose salary is between 80000 and 100000.
     select * from employee where salary between 80000 and 100000;
-    
+
 2. Find employees whose bonus lies between 2000 and 6000.
+    select FULL_NAME from employee where Bonus between 2000 and 6000;
+
 3. List names and DOBs of employees born between '1992-01-01' and '1995-12-31'.
+    select FULL_NAME , DOB from employee where DOB between '1992-01-01' and '1995-12-31';
+
 4. Get names and join dates of employees hired between '2020-01-01' and '2021-12-31'.
+    select FULL_NAME , JOIN_DATE from employee where JOIN_DATE '2020-01-01' and '2021-12-31';
+
 5. Display details of employees with EMP_ID between 1100 and 1500.
-6. Show names and annual salary of employees whose annual salary is between 900000
-7. and 1100000.
+    select * from employee where EMP_ID between 1100 and 1500;
+
+6. Show names and annual salary of employees whose annual salary is between 900000 and 1100000.
+    select FULL_NAME ,salary*12 from employee where salary*12 between 900000 and 1100000;
+
 8. Find employees with DEPT_ID between 2 and 4.
+    select FULL_NAME , DEPT_ID from employee where DEPT_ID between 2 and 4 ;
+
 9. Get names of employees whose bonus is between 3000 and 10000.
+    select FULL_NAME  from employee where Bonus   between 3000 and 10000;
+
 10. List employees whose salary falls between 60000 and 85000.
+    select * from employee where salary between 60000 and 85000;
+
 11. Show details of employees whose join date is between '2018-01-01' and '2023-01-01'.
+    select * from employee where JOIN_DATE between  '2018-01-01' and '2023-01-01';
+
 12. Show employees born between '1990-01-01' and '1993-12-31'.
+    select * from employee DOB  between '1990-01-01' and '1993-12-31';
+
 13. Get employees whose BONUS is between 4000 and 10000.
+    selct * from  employee Bonus between 4000 and 10000;
 
 
 LIKE
 
 1. Show names of employees whose names start with ‘S’.
+    select Full_NAME from employee where Full_NAME like 'S%';
+
 2. Find employees whose full name ends with ‘a’.
+    select Full_NAME from employee where  Full_NAME like '%a';
+
 3. Display details of employees whose full name contains the letter ‘i’.
+    select * from employee where Full_NAME like '%i%';
+
 4. Get names of employees where the second character is 'a'.
+    select FULL_NAME from employee where Full_NAME like '_a%';
+
 5. Show names of employees whose names have exactly 6 characters.
+    select Full_NAME from employee where Full_NAME like '______';
+
 6. List employees whose names start with ‘K’ or ‘P’.
+    select FULL_NAME from employee where FULL_NAME like 'K%' or Full_NAME like 'P%';
+
 7. Find employees whose role contains the word ‘Engineer’.
+    select Full_NAME, ROLE from employee where ROLE like '%Engineer%';
+
 8. Get names of employees ending with the letter 'n'.
+    select Full_NAME from employee where Full_NAME like '%n';
+
 9. Display names of employees having at least two 'a' characters.
+    select Full_NAME from employee where Full_NAME like '%a%a%';
+
 10. List names of employees whose name ends with ‘h’ or ‘y’.
-11. Display employees whose name is NOT LIKE '%a%'.
+    select Full_NAME from employee where Full_NAME like '%h' or Full_NAME like '%y';
+
+11. Display employees whose name is NOT LIKE stat with a.
+    select Full_NAME from employee where Full_NAME not like 'a%';
+
 12. List names of employees whose FULL_NAME starts with ‘M’ or ‘J’.
+    select Full_NAME from employee where Full_NAME like 'M%' or Full_NAME like 'J%';
+
 13. Display employees whose FULL_NAME is 5 characters long.
+    select Full_NAME from employee where Full_NAME like '_____';
+
 
 
 IS NULL & IS NOT NULL
