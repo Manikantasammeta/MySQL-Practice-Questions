@@ -548,19 +548,43 @@ IS NULL & IS NOT NULL
 
 8. Find employees whose REPORTS_TO is NOT NULL and work in DEPT_ID 1.
     selct * from employee where REPORTS_TO is null and DEPT_ID =1;
-    
+
 9. Get full names of employees whose BONUS and REPORTS_TO are both NULL.
+    select * from employee where Bonus is null and REPORTS_TO is null;
+
 10. List employees with BONUS IS NOT NULL and are hired after 2021.
+    select FULL_NAME from employee where Bonus is null and JOIN_DATE > '2021';
+
 11. Display names of employees whose BONUS is NULL or REPORTS_TO is NULL.
+    select Full_NAME from employee where Bonus is null and REPORTS_TO is null;
+
 12. Find all employees who have a BONUS but no REPORTS_TO.
+     select * from employee where Bonus is not null and REPORTS_TO is not null;
+
 13. Show details of employees who are missing BONUS but have EMP_TYPE as ‘Contract’.
+    select * from employee where Bonus is null and EMP_TYPE = 'Contract';
+
 15. List names and roles of employees with NULL BONUS and working in DEPT_ID 2.
+    select FULL_NAME , ROLE from employee where Bonus is null and DEPT_ID =2;
+
 16. Get details of employees who don’t have a BONUS and were born after 1993.
+    select * from employee where Bonus is null and DOB > 1993;
+
 17. Show names of employees whose BONUS is NOT NULL and whose ROLE contains‘Engineer’.
+    select FULL_NAME from employee where Bonus is null and ROLE like '%Engineer%';
+
 18. Find employees with a NULL BONUS but a salary above 85000.
+    select * from employee where Bonus is null and salary >85000;
+
 19. Display employee details where REPORTS_TO is NULL and ROLE is ‘HR Manager’.
+    select * from employee where REPORTS_TO is null and ROLE = 'HR Manager';
+
 21. List full names of employees whose BONUS is NULL and EMP_ID is greater than 300.
+     select  Full_NAME from employee where Bonus is null and EMP_ID >300;
+
 22. Show the employees whose BONUS is NULL and also joined after 2022.
+    select * from employee where Bonus is null and JOIN_DATE > 2022;
+    
 
 
 
