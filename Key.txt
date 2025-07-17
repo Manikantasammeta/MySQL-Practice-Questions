@@ -526,13 +526,29 @@ IS NULL & IS NOT NULL
 
 
 1. Show details of employees whose BONUS is NULL.
+    select * from employee where BONUS is NULL;
+
 2. List names of employees who do not have a BONUS.
+    select Full_NAME from employee where Bonus is null;
+
 3. Display full name and salary of employees whose BONUS is NOT NULL.
+    select FULL_NAME from employee where Bonus is not null;
+
 4. Get names of employees who have a REPORTS_TO value.
-5. Find employees who do not have a reporting manager (REPORTS_TO is NULL).
+    select FULL_NAME from employee where REPORTS_TO is not null;
+
+5. Find employees who do not have a reporting manager .
+    selct Full_NAME from employee where  REPORTS_TO is NULL;
+
 6. List employees whose BONUS is NULL and EMP_TYPE is ‘Intern’.
+    select * from employee where Bonus is null and EMP_TYPE ='Intern';
+
 7. Show full names of employees whose BONUS is NULL but SALARY is greater than 80000.
+    select FULL_NAME from employee where Bonus is null and salary> 80000;
+
 8. Find employees whose REPORTS_TO is NOT NULL and work in DEPT_ID 1.
+    selct * from employee where REPORTS_TO is null and DEPT_ID =1;
+    
 9. Get full names of employees whose BONUS and REPORTS_TO are both NULL.
 10. List employees with BONUS IS NOT NULL and are hired after 2021.
 11. Display names of employees whose BONUS is NULL or REPORTS_TO is NULL.
