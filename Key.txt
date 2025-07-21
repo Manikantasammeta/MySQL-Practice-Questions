@@ -593,11 +593,22 @@ Aggregate Functions COUNT (), SUM (), AVG (), MIN (), MAX ()
 
 
 1. Find the total number of employees in the company.
+    SELECT COUNT(*) FROM employee;
 2. Count how many employees are ‘Full-time’.
+    select Count(*) from employee where EMP_TYPE = 'Full-time';
+
 3. Count the number of employees who joined after 2020.
+    select count(*) from employee where JOIN_DATE >2020;
+
 4. Count employees with a bonus greater than 5000.
+    select count(*) from employee where Bonus > 5000;
+
 5. Find how many employees are in DEPT_ID 1.
+    selct count(*) from employee where DEPT_ID =1;
+
 6. Count the number of employees who are female and have a salary above 80000.
+    selct count(*) from employee where Gender ='female' and salary >80000;
+    
 7. Count employees who are interns and have no bonus (BONUS IS NULL).
 8. Find the total salary paid to all employees.
 9. Find the total bonus given to employees in DEPT_ID 3.
