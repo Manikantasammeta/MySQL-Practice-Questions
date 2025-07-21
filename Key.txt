@@ -608,26 +608,66 @@ Aggregate Functions COUNT (), SUM (), AVG (), MIN (), MAX ()
 
 6. Count the number of employees who are female and have a salary above 80000.
     selct count(*) from employee where Gender ='female' and salary >80000;
-    
+
 7. Count employees who are interns and have no bonus (BONUS IS NULL).
+    selct count(*) from employee where EMP_TYPE = 'intern' and Bonus is null;
+
 8. Find the total salary paid to all employees.
+    selct sum(salary) from employee;
+
 9. Find the total bonus given to employees in DEPT_ID 3.
+    select sum(Bonus) from employee;
+
 10. Calculate the average salary of employees with role ‘Backend Developer’.
+    select AVG(salary) from employee where ROLE ='Backend Developer';
+
 11. Get the average bonus for employees who joined after 2021.
+    select AVG(Bonus) from employee where JOIN_DATE > 2021;
+
 12. Find the maximum salary among male employees.
+    select MIN(salary) from employee where GENDER ='male';
+
 13. Show the highest bonus received by a female employee.
+    select Max(Bonus) from employee where Gender ='FEMALE';
+
 14. Get the minimum salary among employees with role ‘DevOps Engineer’.
+    select MIN(salary) from employee where ROLE = 'DevOps Engineer';
+
 15. Find the lowest bonus among employees who are not interns.
+    select min(Bonus) from employee where EMP_TYPE != 'Intern';
+
 16. Find the total salary of employees who report to EMP_ID 1739.
+    select SUM(salary) from employee where REPORTS_TO= 1739;
+
 17. Calculate the average salary of employees in DEPT_ID 2.
+    selct AVG(salary) from employee where DEPT_ID =2;
+
 18. Get the maximum salary of employees whose EMP_TYPE is ‘Contract’.
+    select Max(salary) from employee where EMP_TYPE= 'Contract';
+
 19. Find the minimum salary among employees born after 1995.
+    select MIN(slary) from employee where DOB > 1995;
+
 20. Count the number of employees who are not in DEPT_ID 1 or 2.
+    select count(*) from employee where DEPT_ID not in (1,2);
+    select  count(*) from employee where DEPT_ID != 1 or DEPT_ID!=2;
+
 21. Find the sum of all bonuses where BONUS is NOT NULL.
+    select SUM(bonus) from employee where Bonus is not null;
+    select SUM(Bonus) from employee where Bonus != 0;
+
 22. Find the total number of employees whose names start with 'S'.
+    select count(*) from employee where FULL_NAME like 's%';
+
 23. Show the highest salary of employees with blood group ‘A+’.
+    select MAX(salary) from employee where BLOOD_GROUP ='A+';
+
 24. Count the number of employees whose ROLE contains ‘Engineer’.
+    select count(*) from employee where ROLE like '%Engineer%';
+
 25. Calculate the average salary of employees whose salary is greater than 90000.
+    select AVG(salary) from employee where salary > 90000;
+    
 
 
 
