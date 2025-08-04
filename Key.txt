@@ -858,32 +858,60 @@ MAX (), MIN ()
     select * from employee where (SALARY + BONUS) = (select MAX(SALARY + BONUS) from employee);
 
 19.	Display the name of the employee who earns more than everyone else in DEPT_ID 1.
-20.	List the name and salary of the employee whose salary is greater than the average of 
-all 'Contract' employees.
+    select * from employee where (SALARY + BONUS) > (select MAX(SAL) from employee);
+
+20.	List the name and salary of the employee whose salary is greater than the average of all 'Contract' employees.
+    select * from employee where SALARY > (select AVG(SALARY) from employee where JOB_TITLE = 'Contract');
+
+
+
+
 Window Functions
 1.	Assign a row number to each employee ordered by salary in descending order.
+    SELECT ROW_NUMBER() OVER (ORDER BY SALARY DESC) AS ROW_NUM, * FROM employee;
+
 2.	Display the top 3 highest-paid employees in each department using RANK().
+    SELECT * FROM (SELECT *, RANK() OVER (PARTITION BY DEPT_ID ORDER BY SALARY DESC) AS RANK FROM employee) WHERE RANK <= 3;
+
 3.	Find the ROW_NUMBER() of each employee ordered by JOIN_DATE.
+    SELECT ROW_NUMBER() OVER (ORDER BY JOIN_DATE) AS ROW_NUM, * FROM employee;
+
 4.	Rank employees by bonus amount within each ROLE.
-5.	Show employees with their DENSE_RANK() based on SALARY in descending 
-order.
+    SELECT *, RANK() OVER (PARTITION BY ROLE ORDER BY BONUS DESC) AS RANK;
+
+5.	Show employees with their DENSE_RANK() based on SALARY in descending order.
+    SELECT *, DENSE_RANK() OVER (ORDER BY SALARY DESC) AS DENSE_RANK FROM employee;
+
 6.	List employees and divide them into 4 buckets using NTILE(4) based on their salary.
-7.	Within each department, assign a ROW_NUMBER() based on the order of 
-JOIN_DATE.
-8.	Rank employees based on BONUS — ties should receive the same rank (use 
-RANK ()).
-9.	Display ROW_NUMBER() for employees partitioned by EMP_TYPE and ordered by 
-SALARY.
+    SELECT *, NTILE(4) OVER (ORDER BY SALARY) AS QUARTILE FROM employe
+
+7.	Within each department, assign a ROW_NUMBER() based on the order of JOIN_DATE.
+    SELECT ROW_NUMBER() OVER (PARTITION BY DEPT_ID ORDER BY JOIN_DATE) AS ROW_NUM;
+
+8.	Rank employees based on BONUS — ties should receive the same rank (use RANK ()).
+    SELECT *, RANK() OVER (ORDER BY BONUS DESC) AS RANK FROM employee;
+
+9.	Display ROW_NUMBER() for employees partitioned by EMP_TYPE and ordered by SALARY.
+    SELECT ROW_NUMBER() OVER (PARTITION BY EMP_TYPE ORDER BY SALARY) AS ROW_NUM FROM employee;
+
 10.	For each gender, show employees and assign ranks based on their salary.
-11.	Use DENSE_RANK() to find if any two employees in the same department have the 
-same salary.
-12.	Assign a ROW_NUMBER() to each employee grouped by department and sorted by 
-bonus.
-13.	Display employees and their position in salary ranking (within their ROLE) using 
-RANK().
+    SELECT *, RANK() OVER (PARTITION BY GENDER ORDER BY SALARY DESC) AS R;
+
+11.	Use DENSE_RANK() to find if any two employees in the same department have the  same salary.
+    SELECT *, DENSE_RANK() OVER (PARTITION BY DEPT_ID ORDER BY SALARY) AS same dept;
+
+12.	Assign a ROW_NUMBER() to each employee grouped by department and sorted by bonus.
+    SELECT ROW_NUMBER() OVER (PARTITION BY DEPT_ID ORDER BY BONUS DESC) AS ROW;
+
+13.	Display employees and their position in salary ranking (within their ROLE) using  RANK().
+    SELECT *, RANK() OVER (PARTITION BY ROLE ORDER BY SALARY DESC) AS RANK;
+
 14.	Divide employees into 3 salary bands using NTILE(3) over SALARY.
-15.	Assign ROW_NUMBER() to each employee, then filter to get the most recently 
-joined employee in each department.
+    SELECT *, NTILE(3) OVER (ORDER BY SALARY) AS SALARY_BAND FROM employe;
+
+15.	Assign ROW_NUMBER() to each employee, then filter to get the most recently joined employee in each department.
+    SELECT ROW_NUMBER() OVER (PARTITION BY DEPT_ID ORDER BY JOIN_DATE DESC) AS ROW;
+
 
 ORDER BY
 1.	List all employees sorted by salary in ascending order.
