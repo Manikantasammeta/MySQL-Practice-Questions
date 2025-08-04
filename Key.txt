@@ -739,31 +739,62 @@ Date Functions  YEAR (), MONTH (), DATEDIFF ()
 
 1.	List employees born in the year 1993.
     select * from employee where YEAR(BIRTH_DATE) = 1993;
+
 2.	Show employees who joined in 2021.
     select * from employee where YEAR(JOIN_DATE) = 2021;
+
 3.	Display names and month of their date of birth.
     select FULL_NAME, MONTH(BIRTH_DATE) from employee;
+
 4.	Show full name and how many years old they are (using YEAR(CURDATE()) -YEAR(DOB)).
-    select FULL_NAME, YEAR(CURDATE()) - YEAR(BIRTH_DATE) as age from employe
+    select FULL_NAME, YEAR(CURDATE()) - YEAR(BIRTH_DATE) as age from employe;
+
 5.	Show e mployees hired in the month of March.
     select * from employee where MONTH(JOIN_DATE) = 3;
+
 6.	Find employees born in June.
     select * from employee where MONTH(BIRTH_DATE) = 6;
+
 7.	Get names of employees hired in the same month they were born.
+    select FULL_NAME from employee where MONTH(BIRTH_DATE) = MONTH(JOIN_DATE);
+
 8.	Show the number of days since employee joined.
+    select DATEDIFF(CURDATE(),JOIN_DATE) from employee;
+
 9.	Find employees who joined less than 500 days ago.
+    select * from employee where DATEDIFF(CURDATE(),JOIN_DATE) < 500;
+
 10.	List employees who were born in January.
+    select * from employee where MONTH(BIRTH_DATE) = 1;
+
 11.	Show employees hired in 2020 and in March.
+    select * from employee where YEAR(JOIN_DATE) = 2020 and MONTH(JOIN_DATE)=March;
+
 12.	Display full names and the difference in days between DOB and JOIN_DATE.
+    select FULL_NAME, DATEDIFF(CURDATE(),JOIN_DATE) - DATEDIFF(CURDATE(),JOIN_DATE);
+
 13.	Show employees hired in the same year as EMP_ID > 1500.
+    select * from employee where YEAR(JOIN_DATE) = YEAR(JOIN_DATE);
+
 14.	List employees whose joining year is even (MOD(YEAR(JOIN_DATE), 2) = 0).
-15.	Show employees who were hired before they turned 30 (DOB + 30 years <  
-JOIN_DATE).
+    select * from employee where MOD(YEAR(JOIN_DATE), 2) = 0;
+
+15.	Show employees who were hired before they turned 30 (DOB + 30 years <  JOIN_DATE).
+    select * from employee where BIRTH_DATE + INTERVAL 30 YEAR < JOIN_DATE;
+
 16.	Find employees hired in the last 2 years.
+    select * from employee where YEAR(CURDATE()) - YEAR(JOIN_DATE);
 17.	Display employees born in the 90s (YEAR(DOB) BETWEEN 1990 AND 1999).
+    select * from employee where YEAR(BIRTH_DATE) BETWEEN 1990 AND 1999;
+
 18.	List employees with same DOB month and JOIN month.
+    select * from employee where MONTH(BIRTH_DATE) = MONTH(JOIN_DATE);
+
 19.	Show employees with JOIN_DATE and DOB within the same year.
+    select * from employee where YEAR(JOIN_DATE) = YEAR(BIRTH_DATE);
+    
 20.	Find employees who were born at least 10000 days ago.
+    select * from employee where DATEDIFF(CURDATE(),BIRTH_DATE) > 100;
 
 
 
