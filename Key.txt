@@ -738,12 +738,17 @@ String Functions: UPPER (), LOWER (), LENGTH (), SUBSTR ()
 Date Functions  YEAR (), MONTH (), DATEDIFF ()
 
 1.	List employees born in the year 1993.
+    select * from employee where YEAR(BIRTH_DATE) = 1993;
 2.	Show employees who joined in 2021.
+    select * from employee where YEAR(JOIN_DATE) = 2021;
 3.	Display names and month of their date of birth.
-4.	Show full name and how many years old they are (using YEAR(CURDATE()) -        
-YEAR(DOB)).
+    select FULL_NAME, MONTH(BIRTH_DATE) from employee;
+4.	Show full name and how many years old they are (using YEAR(CURDATE()) -YEAR(DOB)).
+    select FULL_NAME, YEAR(CURDATE()) - YEAR(BIRTH_DATE) as age from employe
 5.	Show e mployees hired in the month of March.
+    select * from employee where MONTH(JOIN_DATE) = 3;
 6.	Find employees born in June.
+    select * from employee where MONTH(BIRTH_DATE) = 6;
 7.	Get names of employees hired in the same month they were born.
 8.	Show the number of days since employee joined.
 9.	Find employees who joined less than 500 days ago.
