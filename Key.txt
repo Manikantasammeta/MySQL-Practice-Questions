@@ -792,7 +792,7 @@ Date Functions  YEAR (), MONTH (), DATEDIFF ()
 
 19.	Show employees with JOIN_DATE and DOB within the same year.
     select * from employee where YEAR(JOIN_DATE) = YEAR(BIRTH_DATE);
-    
+
 20.	Find employees who were born at least 10000 days ago.
     select * from employee where DATEDIFF(CURDATE(),BIRTH_DATE) > 100;
 
@@ -804,25 +804,59 @@ Date Functions  YEAR (), MONTH (), DATEDIFF ()
 
 MAX (), MIN ()
 1.	List the name of the employee with the highest salary.
+    select MAX(SALARY) from employee;
+
 2.	Find the name of the employee drawing the lowest salary.
+    select MIN(SALARY) from employee;
+
 3.	Show the name and joining date of the employee who joined earliest.
+    select MIN(JOIN_DATE) from employee;
+
 4.	Display the name and join date of the employee who joined most recently.
+    select MAX(JOIN_DATE) from employee;
+
 5.	Fetch the name and bonus of the employee receiving the smallest bonus.
+    select MIN(BONUS) from employee;
+
 6.	Get the name, salary, and bonus of the employee who receives the highest bonus.
+    select MAX(BONUS) from employee;
+
 7.	Retrieve all details of the employee with the highest EMP_ID.
+    select * from employee where EMP_ID = (select MAX(EMP_ID) from employee);
+
 8.	Find the employee record with the earliest JOIN_DATE.
+    select * from employee where JOIN_DATE = (select MIN(JOIN_DATE) from employee);
+
 9.	Show details of the employee with the lowest total annual salary (SALARY * 12).
-10.	Get the name and annual salary of the employee whose annual salary is higher than all      
-'Interns'.
+    select * from employee where (SALARY * 12) = (select MIN(SALARY) from employee);
+
+10.	Get the name and annual salary of the employee whose annual salary is higher than all 'Interns'.
+    select * from employee where (SALARY * 12) > (select MAX(SALARY) from employee where JOB_TITLE = 'Intern');
+
 11.	List the full name of the employee who is the oldest in the company (based on DOB).
+    select * from employee where BIRTH_DATE = (select MIN(BIRTH_DATE) from employee);
+
 12.	Find the full name of the employee who is the youngest.
+    select * from employee where BIRTH_DATE = (select MAX(BIRTH_DATE) from employee);
+
 13.	Display the employee with the longest full name (maximum LENGTH).
+    select * from employee where LENGTH(FULL_NAME) = (select MAX(LENGTH(FULL_NAME)));
+
 14.	List the employee whose bonus is closest to 0 but not NULL.
-15.	Find the employee with the lowest salary among those working as ‘Backend 
-Developer’.
+    select * from employee where BONUS = (select MIN(BONUS) from employee where BONUS IS Null);
+
+15.	Find the employee with the lowest salary among those working as ‘Backend Developer’.
+    select * from employee where SALARY = (select MIN(SALARY) from employee where JOB_TITLE ="Developer");
+
 16.	Show the full name of the employee with the latest date of birth.
+    select * from employee where BIRTH_DATE = (select MAX(BIRTH_DATE) from employee);
+
 17.	Get the details of the employee whose REPORTS_TO value is highest.
+    select * from employee where REPORTS_TO = (select MAX(REPORTS_TO) from employee);
+
 18.	Find the employee with the highest annual compensation (SALARY + BONUS).
+    select * from employee where (SALARY + BONUS) = (select MAX(SALARY + BONUS) from employee);
+
 19.	Display the name of the employee who earns more than everyone else in DEPT_ID 1.
 20.	List the name and salary of the employee whose salary is greater than the average of 
 all 'Contract' employees.
