@@ -920,14 +920,18 @@ ORDER BY
 2.	Display full names and join dates of employees, ordered by the most recent hire first.
     SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) AS FULL_NAME, JOIN_DATE FROM employee ORDER;
 
-3.	Show employee names and bonuses, ordered from highest to lowest bonus.
+3.	Show employee names and bonuses, ordered from highest to lowest bonus.  
 
 4.	List employees by department, sorted by DEPT_ID in ascending order.
+
 5.	Display full names and DOBs, ordered by age (youngest first).
+
 6.	Show full names and roles of employees, ordered alphabetically by role.
+
 7.	List employees with their salaries, sorted in descending order of salary.
-8.	Show full name and bonus, ordered by NULL bonuses last and then descending 
-bonuses.
+
+8.	Show full name and bonus, ordered by NULL bonuses last and then descending bonuses.
+
 9.	List employees ordered by blood group alphabetically.
 10.	Show full name and salary, sorted by EMP_TYPE ascending and then salary 
 descending.
