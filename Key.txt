@@ -933,13 +933,19 @@ ORDER BY
 8.	Show full name and bonus, ordered by NULL bonuses last and then descending bonuses.
 
 9.	List employees ordered by blood group alphabetically.
-10.	Show full name and salary, sorted by EMP_TYPE ascending and then salary 
-descending.
+
+10.	Show full name and salary, sorted by EMP_TYPE ascending and then salary descending.
+
 11.	Display names and DOB, ordered by year of birth (oldest first).
+
 12.	List employees sorted first by DEPT_ID, then by salary in descending order.
+
 13.	Show employee names, ordered by LENGTH of their names in descending order.
+
 14.	List full name and join date of employees, sorted by join year then by name.
+
 15.	Display employees ordered by GENDER and then by SALARY.
+
 16.	Show employees who joined after 2020, ordered by bonus in descending order.
 17.	List employees by EMP_TYPE in descending order and full name alphabetically.
 18.	Get employee names sorted by the last character of their name.
