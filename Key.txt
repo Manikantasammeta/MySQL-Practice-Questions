@@ -915,8 +915,13 @@ Window Functions
 
 ORDER BY
 1.	List all employees sorted by salary in ascending order.
+    SELECT * FROM employee ORDER BY SALARY ASC;
+
 2.	Display full names and join dates of employees, ordered by the most recent hire first.
+    SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) AS FULL_NAME, JOIN_DATE FROM employee ORDER;
+
 3.	Show employee names and bonuses, ordered from highest to lowest bonus.
+
 4.	List employees by department, sorted by DEPT_ID in ascending order.
 5.	Display full names and DOBs, ordered by age (youngest first).
 6.	Show full names and roles of employees, ordered alphabetically by role.
