@@ -947,21 +947,26 @@ ORDER BY
 15.	Display employees ordered by GENDER and then by SALARY.
 
 16.	Show employees who joined after 2020, ordered by bonus in descending order.
+
 17.	List employees by EMP_TYPE in descending order and full name alphabetically.
+
 18.	Get employee names sorted by the last character of their name.
-19.	Display employees ordered by ROLE length (number of characters in role) and then 
-by full name.
+
+19.	Display employees ordered by ROLE length (number of characters in role) and then by full name.
+
 20.	List employees by annual salary (salary * 12), sorted from highest to lowest.
+
+
+
+
 
 GROUP BY
 
-1.	Show the number of employees in each department, excluding those with the role 
-2.	‘Penetration Tester’.
+1.	Show the number of employees in each department, excluding those with the role ‘Penetration Tester’.
 3.	Display the maximum salary paid for each unique role.
 4.	Count the noof employees in each role where the full name contains the letter 'a'.
 5.	Find how many employees in each dept have received a bonus (BONUS IS NOT NULL).
-6.	List the total number of employees in each department, excluding those with the role '
-7.	Software Architect'.
+6.	List the total number of employees in each department, excluding those with the role 'Software Architect'.
 8.	Show total salary paid to all employees for each job role.
 9.	Count the number of employees working as ‘Technical Lead’ in each department.
 10.	Display the average salary paid per department, excluding DEPT_ID 2.
