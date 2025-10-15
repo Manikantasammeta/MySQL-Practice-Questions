@@ -927,7 +927,7 @@ ORDER BY
 5.	Display full names and DOBs, ordered by age (youngest first).
 
 6.	Show full names and roles of employees, ordered alphabetically by role.
-
+    select Full_NAME from employee order by Full_NAME
 7.	List employees with their salaries, sorted in descending order of salary.
 
 8.	Show full name and bonus, ordered by NULL bonuses last and then descending bonuses.
