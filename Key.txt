@@ -963,14 +963,23 @@ ORDER BY
 GROUP BY
 
 1.	Show the number of employees in each department, excluding those with the role ‘Penetration Tester’.
+
 3.	Display the maximum salary paid for each unique role.
+
 4.	Count the noof employees in each role where the full name contains the letter 'a'.
+
 5.	Find how many employees in each dept have received a bonus (BONUS IS NOT NULL).
+
 6.	List the total number of employees in each department, excluding those with the role 'Software Architect'.
+
 8.	Show total salary paid to all employees for each job role.
+
 9.	Count the number of employees working as ‘Technical Lead’ in each department.
+
 10.	Display the average salary paid per department, excluding DEPT_ID 2.
+
 11.	Count how many employees have the letter 'a' in their full name grouped by role.
+
 12.	For each department, show the number of employees and their average salary were
 13.	salary is greater than 80000.
 14.	List total salary paid and number of employees working as 'Intern' in each department.
