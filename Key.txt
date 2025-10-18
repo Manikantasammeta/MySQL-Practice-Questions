@@ -980,23 +980,37 @@ GROUP BY
 
 11.	Count how many employees have the letter 'a' in their full name grouped by role.
 
-12.	For each department, show the number of employees and their average salary were
-13.	salary is greater than 80000.
+12.	For each department, show the number of employees and their average salary weresalary is greater than 80000.
+
 14.	List total salary paid and number of employees working as 'Intern' in each department.
+
 15.	For each role, show the number of employees and the highest salary among them.
+
 16.	Display the maximum salary given to employees grouped by department.
+
 17.	Show how many times each unique salary value occurs in the employee table.
+
 18.	Display the average bonus given to employees in each EMP_TYPE.
+
 19.	Show the total number of male and female employees in each department.
+
 20.	Count how many employees joined in each year.
+
 21.	List the number of employees grouped by their blood group.
+
 22.	Display the total bonus amount given in each department.
+
 23.	Show the average salary of employees grouped by gender.
+
 24.	List the maximum bonus received by employees in each job role.
+
 25.	Find how many employees report to each manager (REPORTS_TO).
+
 26.	Show the count of employees in each department whose salary is above 85000.
-27.	Display the number of employees and total salary grouped by EMP_TYPE, excluding 
-28.	interns.
+
+27.	Display the number of employees and total salary grouped by EMP_TYPE, excluding interns.
+
+
 Having Clause 
 
 1.	Display the roles (designations) where at least 2 employees are working.
